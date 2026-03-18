@@ -1,75 +1,284 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Yuna's Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuna Bae | Infrastructure & Data Science Portfolio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <style>
+        :root {
+            --primary-color: #0056b3; 
+            --secondary-color: #475569;
+            --bg-color: #f8fafc; 
+            --text-color: #1e293b;
+            --card-bg: #ffffff;
+            --accent-bg: #f1f5f9;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Pretendard', -apple-system, sans-serif; 
+            line-height: 1.7; color: var(--text-color); background-color: var(--bg-color);
+            word-break: keep-all;
+        }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+        
+        /* Navigation */
+        nav { position: fixed; top:0; width:100%; background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-bottom: 1px solid #e2e8f0; z-index: 1000; padding: 12px 0; }
+        nav .container { display: flex; justify-content: space-between; align-items: center; }
+        nav a { text-decoration: none; color: var(--text-color); font-weight: 600; margin-left: 15px; font-size: 0.85rem; text-transform: uppercase; }
+
+        /* Header */
+        header { background: white; padding: 130px 0 60px; border-bottom: 1px solid #e2e8f0; text-align: center; }
+        .title-name { font-size: 3rem; font-weight: 800; color: var(--primary-color); margin-bottom: 5px; }
+        .subtitle { font-size: 1.3rem; color: var(--secondary-color); font-weight: 600; margin-bottom: 15px; }
+        .tagline { font-size: 1rem; color: #64748b; font-style: italic; max-width: 700px; margin: 0 auto; line-height: 1.4; }
+
+        /* Sections */
+        section { padding: 80px 0; border-bottom: 1px solid #e2e8f0; }
+        h2 { font-size: 1.8rem; margin-bottom: 30px; color: var(--text-color); position: relative; padding-left: 15px; border-left: 5px solid var(--primary-color); text-transform: uppercase; }
+
+        /* 1. About Me (Narrative) */
+        .about-text { font-size: 1.1rem; color: #334155; line-height: 1.8; margin-bottom: 30px; }
+
+        /* Card Common Style  */
+        .content-card { 
+            background: white; 
+            padding: 35px; 
+            border-radius: 12px; 
+            border: 1px solid #e2e8f0; 
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+
+        /* 2. Personal Profile List */
+        .profile-info-list { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; }
+        .profile-info-list li { font-size: 1rem; display: flex; align-items: center; }
+        .profile-info-list li i { color: var(--primary-color); width: 25px; font-size: 1.1rem; }
+        .profile-info-list b { width: 90px; color: var(--secondary-color); font-weight: 700; }
+
+        /* 3. Profile  */
+        .profile { font-size: 1.25rem; color: #334155; line-height: 1.8; margin-bottom: 15px; }
+
+        /* 4. Experience Specifics */
+        .job-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px; border-bottom: 1px solid #f1f5f9; padding-bottom: 10px; }
+        .job-title { font-size: 1.45rem; font-weight: 700; color: var(--primary-color); }
+        .company-info { font-size: 1.15rem; font-weight: 600; color: #334155; }
+        .job-date { color: var(--secondary-color); font-weight: 600; font-size: 0.95rem; }
+
+        .section-sub { font-size: 1rem; font-weight: 700; margin: 25px 0 10px; color: #64748b; text-transform: uppercase; }
+        .resp-list { font-size: 1rem; margin-bottom: 25px; list-style: inside circle; padding-left: 5px; }
+
+        /* Project Items */
+        .project-item { background: var(--accent-bg); padding: 20px; border-radius: 8px; border-left: 4px solid #cbd5e1; margin-bottom: 15px; }
+        .p-name { font-weight: 700; font-size: 1.1rem; color: #0f172a; display: block; margin-bottom: 5px; }
+        .p-meta { font-size: 0.9rem; color: var(--secondary-color); font-weight: 600; margin-bottom: 10px; display: block; }
+
+        /* Education (Slim Grid) */
+        .edu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; }
+        .edu-item { background: white; padding: 20px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; justify-content: space-between; align-items: center; }
+        .edu-info h4 { font-size: 1.05rem; color: var(--primary-color); font-weight: 700; }
+        .edu-date { font-size: 0.9rem; font-weight: 700; color: #94a3b8; }
+
+        /* Certs Table */
+        .cert-table { width: 100%; border-collapse: collapse; background: white; font-size: 1rem; }
+        .cert-table th, .cert-table td { padding: 15px; text-align: left; border-bottom: 1px solid #e2e8f0; }
+        .cert-table th { background: #f8fafc; color: var(--secondary-color); font-weight: 700; }
+
+        /* Skills Grid */
+        .key-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
+        .key-item { background: #fff; padding: 12px; border-radius: 8px; border: 1px solid #e2e8f0; font-weight: 600; text-align: center; font-size: 0.95rem; }
+
+        footer { text-align: center; padding: 60px 0; background: white; border-top: 1px solid #e2e8f0; font-size: 1rem; }
+
+        @media (max-width: 768px) {
+            .job-header { flex-direction: column; }
+            .edu-item { flex-direction: column; align-items: flex-start; gap: 8px; }
+            .profile { font-size: 1.1rem; }
+        }
+    </style>
 </head>
 <body>
-  <h1>Hello! I'm Yuna </h1>
-  <h2>VMware Engineer & Data Engineer</h2>
-  <h2>Try to new things and Ready to fly 🪽</h2>
-  <h1>Profile Summary</h1>
-  - Worked as a Virtualization Expert for about 9 years, supporting clients across various industries including finance, manufacturing, and telecommunications by performing infrastructure design, deployment, and issue resolution aligned with clients’ business goals.
-  - Delivered value through solutions aligned with clients’ IT strategies, taking ownership in complex situations and providing clear technical direction.
-  - Built long-term client trust by combining technical expertise with effective communication, acting as a bridge between internal teams and external stakeholders to enhance customer satisfaction and keep ongoing partnerships.
-  
-  <h1>Key Skills</h1>
-  Technical Skills
-    VMware: vSphere, NSX, vSAN, Aria Operations
-    Operating Systems: Windows, Linux
 
-  Soft Skills
-    Cross-functional communication
-    Problem-solving in complex environments
-    Technical documentation and reporting
+    <nav>
+        <div class="container">
+            <div style="font-weight: 800; color: var(--primary-color); font-size: 1.1rem;">YUNA BAE</div>
+            <div>
+                <a href="#about">About</a>
+                <a href="#profile">Profile</a>
+                <a href="#experience">Experience</a>
+                <a href="#education">Education</a>
+							<a href="#certs">Certifications</a>
+            </div>
+        </div>
+    </nav>
 
-  Languages
-    English: IETLS 6.0
+    <header>
+        <div class="container">
+            <div class="title-name">Yuna Bae</div>
+            <div class="subtitle">Virtualization Expert | Data Science Student</div>
+            <p class="tagline">"An engineer who embraces new challenges, maintains a broad perspective, and strives to reach new heights."</p>
+        </div>
+    </header>
 
-  <h1>Professional Experience</h1>
-  <h2>Technical Account Manager | VMware (Korea) 	Apr.2019. – May.2025 </h2>
-    •	Provided technical support across VMware products including vSphere, NSX, and Aria Operations, improving system uptime and reducing incident resolution time through root-cause analysis and proactive troubleshooting.
-    •	Reviewed customer infrastructure and recommended performance optimizations, aligning technical solutions with clients’ IT strategies and business goals.
-    •	Supported VMware upgrade projects by conducting thorough pre-checks and developing detailed work plans, minimizing deployment risks and ensuring smooth execution.
-    •	Maintained high customer satisfaction and CSAT scores by managing escalations, providing timely updates, and continuously improving support processes based on client feedback.
-    •	Contributed to internal knowledge sharing through documentation and feedback loops, enhancing overall team response quality and consistency.
-    •	Built long-term trust with clients by delivering reliable technical support and fostering ongoing service renewals and partnerships.
+    <!-- SECTION 1: ABOUT ME & PERSONAL PROFILE -->
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-text">
+                I have thrived as a Virtualization Expert for over 10 years, leading business success through effective client communication and technical excellence. 
+                <strong>Currently, I am in Canada, pursuing a Data Science Co-op program to expand my technical horizons into data analytics and AI</strong>, 
+                bridging my deep infrastructure expertise with future-ready data technologies.
+            </div>
 
+            <div class="content-card">
+                <ul class="profile-info-list">
+                    <li><i class="fas fa-user"></i> <b>Name</b> Yuna Bae</li>
+                    <li><i class="fas fa-map-marker-alt"></i> <b>Location</b> Vancouver, Canada</li>
+                    <li><i class="fas fa-envelope"></i> <b>Email</b> qodbsk.ca@gmail.com</li>
+                    <li><i class="fas fa-language"></i> <b>Languages</b> English, Korean</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-  <h2>VMware Engineer | E-Tech System (Korea)	Mar.2017 – Mar.2019</h2>
-    •	Executed VMware SDDC design and implementation projects in enterprise environments across various industries, contributing to improved infrastructure scalability and reliability.
-    •	Led projects as Project Leader (PL), successfully delivering SDDC environment designs and deployments on schedule, and producing comprehensive technical documentation.
-    •	Performed VMware solution upgrades, changes, and new deployments, minimizing downtime and ensuring smooth transitions.
-    •	Provided prompt troubleshooting and issue resolution during project execution.
-    •	Delivered maintenance and technical support post-deployment, resulting in increased system stability.
+    <!-- SECTION 2: PROFESSIONAL HIGHLIGHTS (Experience와 동일한 카드 디자인) -->
+    <section id="profile">
+        <div class="container">
+            <h2>Profile</h2>
+            <div class="content-card">
+                <ul class="profile">
+                    <li>
+                        10+ years of expertise in Virtualization supporting Finance, Manufacturing, and Telecommunications sectors.
+                    </li>
+                    <li>
+                        Expertise in aligning IT strategies with business goals and providing clear technical direction in complex situations.
+                    </li>
+                    <li>
+                        Proven track record of building long-term client trust through effective communication and stakeholder bridge-building.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
+    <!-- SECTION 3: TECHNICAL SKILLS -->
+    <section id="skills">
+        <div class="container">
+            <h2>Technical Skills</h2>
+            <div class="key-grid">
+                <div class="key-item">VMware vSphere / VCF</div>
+                <div class="key-item">NSX-V / NSX-T</div>
+                <div class="key-item">vSAN / vRealize Suite</div>
+                <div class="key-item">Aria Operations</div>
+                <div class="key-item">Tanzu (TKGs) / K8s</div>
+                <div class="key-item">vCloud Director (VCD)</div>
+                <div class="key-item" style="background: #eff6ff; border-color: #bfdbfe; color: var(--primary-color);">Data Science (Python/SQL)</div>
+                <div class="key-item" style="background: #eff6ff; border-color: #bfdbfe; color: var(--primary-color);">Data Analysis & AI</div>
+            </div>
+        </div>
+    </section>
 
+    <!-- SECTION 4: PROFESSIONAL EXPERIENCE -->
+    <section id="experience">
+        <div class="container">
+            <h2>Professional Experience</h2>
 
-  <h2>VMware Engineer | 1AOPEN (Korea)	Jul.2015 – Sep.2016</h2>
-    •	Built and operated VMware vSphere-based infrastructure, ensuring high availability and performance.
-    •	Performed maintenance and upgrades for clients’ virtual environments, minimizing downtime and improving system stability.
-    •	Executed virtualization migration and cloud deployment projects, enabling efficient resource use and scalability.
-    •	Conducted P2V (Physical to Virtual), V2V (Virtual to Virtual) migrations, and managed vCloud Director (VCD) implementations to enhance cloud capabilities.
+            <!-- VMware Korea -->
+            <div class="content-card">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Technical Account Manager</div>
+                        <div class="company-info">VMware (Korea)</div>
+                    </div>
+                    <div class="job-date">Apr. 2019 – May. 2025</div>
+                </div>
+                <div class="section-sub">Main Responsibilities</div>
+                <ul class="resp-list">
+                    <li>Infrastructure performance optimization & technical solutions alignment.</li>
+                    <li>Technical support for vSphere, NSX, and Aria Operations with root-cause analysis.</li>
+                </ul>
+                <div class="section-sub">Key Projects</div>
+                <div class="project-item">
+                    <span class="p-name">LG Energy Solutions (TAM)</span>
+                    <span class="p-meta">2025.01 – 2025.05</span>
+                    <p>Supported VCF adoption and designed monitoring dashboards for CPU/GPU latency metrics.</p>
+                </div>
+                <div class="project-item">
+                    <span class="p-name">NHBank (TAM)</span>
+                    <span class="p-meta">2022.08 – 2025.05</span>
+                    <p>PaaS/IaaS infrastructure builds and performance testing with 100% renewal rate.</p>
+                </div>
+            </div>
 
-  <h1>Education</h1>
-  <h2>Data Science Diploma	Jan.2026 – Present</h2>
-  Cornerstone Community College | Vancouver, Canada
+            <!-- E-Tech System -->
+            <div class="content-card">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">VMware Engineer</div>
+                        <div class="company-info">E-Tech System (Korea)</div>
+                    </div>
+                    <div class="job-date">Mar. 2017 – Mar. 2019</div>
+                </div>
+                <div class="section-sub">Key Projects</div>
+                <div class="project-item">
+                    <span class="p-name">Hanatour | Next-Generation SDDC Project</span>
+                    <span class="p-meta">2018.08 – 2019.03</span>
+                    <p>Built SDDC environment using NSX-V, vSAN, vRealize Suite, and vRNI.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <h2>ELS (English Language Study)	Nov.2025 – Dec.2025</h2>
-  Cornerstone Community College | Vancouver, Canada
+    <!-- SECTION 5: EDUCATION -->
+    <section id="education">
+        <div class="container">
+            <h2>Education</h2>
+            <div class="edu-grid">
+                <div class="edu-item">
+                    <div class="edu-info">
+                        <h4>Data Science Diploma</h4>
+                        <p>Cornerstone Community College | Canada</p>
+                    </div>
+                    <div class="edu-date">2026 – Present</div>
+                </div>
+                <div class="edu-item">
+                    <div class="edu-info">
+                        <h4>Bachelor of IT degree</h4>
+                        <p>Suwon University | Korea</p>
+                    </div>
+                    <div class="edu-date">2010 – 2015</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <h2>Bachelor of IT degree (Information Media)	Mar.2010 – Feb.2015</h2>
-  Suwon University | Korea
+    <!-- SECTION 6: CERTIFICATIONS -->
+    <section id="certs">
+        <div class="container">
+            <h2>Certifications</h2>
+            <div style="overflow-x: auto;">
+                <table class="cert-table">
+                    <thead>
+                        <tr><th>Certificate</th><th>Agency</th><th>Date</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>VCAP-DCV 2023 (Design)</td><td>VMware</td><td>2023.12</td></tr>
+                        <tr><td>VCAP-NT 2023 (Deploy)</td><td>VMware</td><td>2023.01</td></tr>
+                        <tr><td>CKAD / CKA (Kubernetes)</td><td>Linux Foundation</td><td>2021.12 / 11</td></tr>
+                        <tr><td>VCAP-DCV 2020 (Design)</td><td>VMware</td><td>2020.05</td></tr>
+                        <tr><td>VCP-DCV 2019</td><td>VMware</td><td>2019.12</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
 
-  <h1>Certifications</h1>
-  VCAP-DCV 2023 (Design) | VMware	Dec.28.2023
-  VCAP-NT 2023 (Deploy) | VMware	Jan.04.2023
-  CKAD | Linux Foundation	Dec.28.2021
-  CKA | Linux Foundation	Nov.03.2021
-  VCAP-DCV 2020 (Design) | VMware	May.15.2020
-  VCP-DCV 2019 | VMware	Dec.03.2019
-  VCAP6-DCV (Deploy) | VMware	Aug.13.2019
-  VCAP6-NV (Deploy) | VMware	Aug.13.2019
-
-
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Yuna Bae. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
