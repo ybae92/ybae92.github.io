@@ -13,6 +13,7 @@
             --text-color: #1e293b;
             --card-bg: #ffffff;
             --accent-bg: #f1f5f9;
+            --transition: all 0.3s ease;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -27,69 +28,68 @@
         /* Navigation */
         nav { position: fixed; top:0; width:100%; background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-bottom: 1px solid #e2e8f0; z-index: 1000; padding: 12px 0; }
         nav .container { display: flex; justify-content: space-between; align-items: center; }
-        nav a { text-decoration: none; color: var(--text-color); font-weight: 600; margin-left: 15px; font-size: 0.85rem; text-transform: uppercase; }
+        nav a { text-decoration: none; color: var(--text-color); font-weight: 600; margin-left: 15px; font-size: 0.85rem; text-transform: uppercase; transition: var(--transition); }
+        nav a:hover { color: var(--primary-color); }
+        
+        /* 포트폴리오 강조 링크 */
+        .nav-portfolio { color: var(--primary-color) !important; border: 1px solid var(--primary-color); padding: 5px 12px; border-radius: 6px; }
+        .nav-portfolio:hover { background: var(--primary-color); color: white !important; }
 
         /* Header */
-        header { background: white; padding: 130px 0 60px; border-bottom: 1px solid #e2e8f0; text-align: center; }
+        header { background: white; padding: 130px 0 80px; border-bottom: 1px solid #e2e8f0; text-align: center; }
         .title-name { font-size: 3rem; font-weight: 800; color: var(--primary-color); margin-bottom: 5px; }
         .subtitle { font-size: 1.3rem; color: var(--secondary-color); font-weight: 600; margin-bottom: 15px; }
-        .tagline { font-size: 1rem; color: #64748b; font-style: italic; max-width: 700px; margin: 0 auto; line-height: 1.4; }
+        .tagline { font-size: 1rem; color: #64748b; font-style: italic; max-width: 700px; margin: 0 auto 25px; line-height: 1.4; }
+
+        /* 메인 포트폴리오 버튼 */
+        .btn-portfolio {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: var(--transition);
+            box-shadow: 0 4px 10px rgba(0, 86, 179, 0.2);
+        }
+        .btn-portfolio:hover {
+            background-color: #004494;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0, 86, 179, 0.3);
+        }
 
         /* Sections */
         section { padding: 80px 0; border-bottom: 1px solid #e2e8f0; }
         h2 { font-size: 1.8rem; margin-bottom: 30px; color: var(--text-color); position: relative; padding-left: 15px; border-left: 5px solid var(--primary-color); text-transform: uppercase; }
 
-        /* 1. About Me (Narrative) */
+        /* (이하 기존 스타일 유지) */
         .about-text { font-size: 1.1rem; color: #334155; line-height: 1.8; margin-bottom: 30px; }
-
-        /* Card Common Style  */
-        .content-card { 
-            background: white; 
-            padding: 35px; 
-            border-radius: 12px; 
-            border: 1px solid #e2e8f0; 
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
-            margin-bottom: 30px;
-        }
-
-        /* 2. Personal Profile List */
+        .content-card { background: white; padding: 35px; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); margin-bottom: 30px; }
         .profile-info-list { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; }
         .profile-info-list li { font-size: 1rem; display: flex; align-items: center; }
         .profile-info-list li i { color: var(--primary-color); width: 25px; font-size: 1.1rem; }
         .profile-info-list b { width: 90px; color: var(--secondary-color); font-weight: 700; }
-
-        /* 3. Profile  */
         .profile { font-size: 1.25rem; color: #334155; line-height: 1.8; margin-bottom: 15px; }
-
-        /* 4. Experience Specifics */
         .job-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px; border-bottom: 1px solid #f1f5f9; padding-bottom: 10px; }
         .job-title { font-size: 1.45rem; font-weight: 700; color: var(--primary-color); }
         .company-info { font-size: 1.15rem; font-weight: 600; color: #334155; }
         .job-date { color: var(--secondary-color); font-weight: 600; font-size: 0.95rem; }
-
         .section-sub { font-size: 1rem; font-weight: 700; margin: 25px 0 10px; color: #64748b; text-transform: uppercase; }
         .resp-list { font-size: 1rem; margin-bottom: 25px; list-style: inside circle; padding-left: 5px; }
-
-        /* Project Items */
         .project-item { background: var(--accent-bg); padding: 20px; border-radius: 8px; border-left: 4px solid #cbd5e1; margin-bottom: 15px; }
         .p-name { font-weight: 700; font-size: 1.1rem; color: #0f172a; display: block; margin-bottom: 5px; }
         .p-meta { font-size: 0.9rem; color: var(--secondary-color); font-weight: 600; margin-bottom: 10px; display: block; }
-
-        /* Education (Slim Grid) */
         .edu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; }
         .edu-item { background: white; padding: 20px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; justify-content: space-between; align-items: center; }
         .edu-info h4 { font-size: 1.05rem; color: var(--primary-color); font-weight: 700; }
         .edu-date { font-size: 0.9rem; font-weight: 700; color: #94a3b8; }
-
-        /* Certs Table */
         .cert-table { width: 100%; border-collapse: collapse; background: white; font-size: 1rem; }
         .cert-table th, .cert-table td { padding: 15px; text-align: left; border-bottom: 1px solid #e2e8f0; }
         .cert-table th { background: #f8fafc; color: var(--secondary-color); font-weight: 700; }
-
-        /* Skills Grid */
         .key-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
         .key-item { background: #fff; padding: 12px; border-radius: 8px; border: 1px solid #e2e8f0; font-weight: 600; text-align: center; font-size: 0.95rem; }
-
         footer { text-align: center; padding: 60px 0; background: white; border-top: 1px solid #e2e8f0; font-size: 1rem; }
 
         @media (max-width: 768px) {
@@ -100,7 +100,6 @@
     </style>
 </head>
 <body>
-
     <nav>
         <div class="container">
             <div style="font-weight: 800; color: var(--primary-color); font-size: 1.1rem;">YUNA BAE</div>
@@ -109,7 +108,7 @@
                 <a href="#profile">Profile</a>
                 <a href="#experience">Experience</a>
                 <a href="#education">Education</a>
-							<a href="#certs">Certifications</a>
+                <a href="portfolio.html" class="nav-portfolio">Portfolio</a>
             </div>
         </div>
     </nav>
@@ -119,6 +118,9 @@
             <div class="title-name">Yuna Bae</div>
             <div class="subtitle">Virtualization Expert | Data Science Student</div>
             <p class="tagline">"An engineer who embraces new challenges, maintains a broad perspective, and strives to reach new heights."</p>
+            <a href="portfolio.html" class="btn-portfolio">
+                <i class="fas fa-folder-open" style="margin-right: 8px;"></i> View Project Portfolio
+            </a>
         </div>
     </header>
 
@@ -134,16 +136,16 @@
 
             <div class="content-card">
                 <ul class="profile-info-list">
-                    <li><i class="fas fa-user"></i> <b>Name</b> Yuna Bae</li>
-                    <li><i class="fas fa-map-marker-alt"></i> <b>Location</b> Vancouver, Canada</li>
-                    <li><i class="fas fa-envelope"></i> <b>Email</b> qodbsk.ca@gmail.com</li>
-                    <li><i class="fas fa-language"></i> <b>Languages</b> English, Korean</li>
+                    <li><i class="fas fa-user"></i> <b> Name</b> Yuna Bae</li>
+                    <li><i class="fas fa-map-marker-alt"></i> <b> Location</b> Vancouver, Canada</li>
+                    <li><i class="fas fa-envelope"></i> <b> Email</b> qodbsk.ca@gmail.com</li>
+                    <li><i class="fas fa-language"></i> <b> Languages</b> English, Korean</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- SECTION 2: PROFESSIONAL HIGHLIGHTS (Experience와 동일한 카드 디자인) -->
+    <!-- SECTION 2: PROFESSIONAL HIGHLIGHTS  -->
     <section id="profile">
         <div class="container">
             <h2>Profile</h2>
@@ -315,58 +317,6 @@
                 </div>
             </div>
 
-        </div>
-    </section>
-
-    
-
-<section id="experience">
-        <div class="container">
-            <h2>Professional Experience</h2>
-
-            <!-- VMware Korea -->
-            <div class="content-card">
-                <div class="job-header">
-                    <div>
-                        <div class="job-title">Technical Account Manager</div>
-                        <div class="company-info">VMware (Korea)</div>
-                    </div>
-                    <div class="job-date">Apr. 2019 – May. 2025</div>
-                </div>
-                <div class="section-sub">Main Responsibilities</div>
-                <ul class="resp-list">
-                    <li>Infrastructure performance optimization & technical solutions alignment.</li>
-                    <li>Technical support for vSphere, NSX, and Aria Operations with root-cause analysis.</li>
-                </ul>
-                <div class="section-sub">Key Projects</div>
-                <div class="project-item">
-                    <span class="p-name">LG Energy Solutions (TAM)</span>
-                    <span class="p-meta">2025.01 – 2025.05</span>
-                    <p>Supported VCF adoption and designed monitoring dashboards for CPU/GPU latency metrics.</p>
-                </div>
-                <div class="project-item">
-                    <span class="p-name">NHBank (TAM)</span>
-                    <span class="p-meta">2022.08 – 2025.05</span>
-                    <p>PaaS/IaaS infrastructure builds and performance testing with 100% renewal rate.</p>
-                </div>
-            </div>
-
-            <!-- E-Tech System -->
-            <div class="content-card">
-                <div class="job-header">
-                    <div>
-                        <div class="job-title">VMware Engineer</div>
-                        <div class="company-info">E-Tech System (Korea)</div>
-                    </div>
-                    <div class="job-date">Mar. 2017 – Mar. 2019</div>
-                </div>
-                <div class="section-sub">Key Projects</div>
-                <div class="project-item">
-                    <span class="p-name">Hanatour | Next-Generation SDDC Project</span>
-                    <span class="p-meta">2018.08 – 2019.03</span>
-                    <p>Built SDDC environment using NSX-V, vSAN, vRealize Suite, and vRNI.</p>
-                </div>
-            </div>
         </div>
     </section>
 
