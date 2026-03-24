@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuna Bae | Project Portfolio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --bg-color: #f8fafc;
+            --text-color: #1e293b;
+        }
+        body { font-family: 'Pretendard', sans-serif; background: var(--bg-color); color: var(--text-color); padding: 50px 0; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        
+        .header { text-align: center; margin-bottom: 60px; }
+        .header h1 { font-size: 2.5rem; color: var(--primary-color); }
+        .header p { font-size: 1.1rem; color: #64748b; margin-top: 10px; }
+
+        /* Portfolio Grid */
+        .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        
+        .portfolio-card { 
+            background: white; border-radius: 15px; overflow: hidden; 
+            border: 1px solid #e2e8f0; transition: 0.3s; box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .portfolio-card:hover { transform: translateY(-10px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); }
+        
+        .card-image { 
+            width: 100%; height: 220px; background: #e2e8f0; 
+            display: flex; align-items: center; justify-content: center;
+            font-size: 4rem; color: white;
+        }
+        
+        .card-content { padding: 25px; }
+        .card-content h3 { font-size: 1.4rem; margin-bottom: 10px; color: var(--primary-color); }
+        .card-content p { font-size: 1rem; color: #475569; margin-bottom: 20px; line-height: 1.6; }
+        
+        .tag-container { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+        .tag { background: #eff6ff; color: var(--primary-color); padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 700; }
+        
+        .btn-link { 
+            display: inline-block; padding: 10px 20px; background: var(--primary-color); 
+            color: white; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 0.9rem;
+        }
+
+        .back-home { text-align: center; margin-top: 80px; }
+        .back-home a { color: var(--secondary-color); text-decoration: none; font-weight: 600; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>Project Portfolio</h1>
+            <p>Visual records of my technical journey and solutions</p>
+        </div>
+
+        <div class="portfolio-grid">
+            
+            <!-- Project 1 -->
+            <div class="portfolio-card">
+                <div class="card-image" style="background: linear-gradient(135deg, #3b82f6, #2563eb);">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <div class="card-content">
+                    <div class="tag-container">
+                        <span class="tag">Python</span><span class="tag">ML</span><span class="tag">Logs</span>
+                    </div>
+                    <h3>Infrastructure Log AI</h3>
+                    <p>Developing an automated anomaly detection system using system logs to predict VMware host failures before they occur.</p>
+                    <a href="#" class="btn-link">Case Study <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="portfolio-card">
+                <div class="card-image" style="background: linear-gradient(135deg, #10b981, #059669);">
+                    <i class="fas fa-desktop"></i>
+                </div>
+                <div class="card-content">
+                    <div class="tag-container">
+                        <span class="tag">Aria Ops</span><span class="tag">Dashboard</span><span class="tag">vSAN</span>
+                    </div>
+                    <h3>Real-time GPU Monitor</h3>
+                    <p>Custom-built Aria Operations dashboards for high-performance computing environments at LG Energy Solutions.</p>
+                    <a href="#" class="btn-link">View Dashboard <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="portfolio-card">
+                <div class="card-image" style="background: linear-gradient(135deg, #f59e0b, #d97706);">
+                    <i class="fas fa-network-wired"></i>
+                </div>
+                <div class="card-content">
+                    <div class="tag-container">
+                        <span class="tag">Automation</span><span class="tag">VCF</span><span class="tag">SDDC</span>
+                    </div>
+                    <h3>SDDC Rapid Deploy</h3>
+                    <p>Architecture design and automated deployment framework for Next-Gen Private Cloud environments.</p>
+                    <a href="#" class="btn-link">Technical Docs <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="back-home">
+            <a href="index.html"><i class="fas fa-chevron-left"></i> Back to Resume</a>
+        </div>
+    </div>
+
+</body>
+</html>
