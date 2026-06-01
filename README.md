@@ -1,4 +1,4 @@
-## 👋 Hi there, I'm Yuna Bae
+## 👋 Hi there, I'm Yuna
 
 ### 🚀 Who am I
 I have thrived as a Virtualization Expert for over 10 years, leading business success through effective client communication and technical excellence.
