@@ -39,21 +39,18 @@ Currently, I am in Canada, pursuing a Data Science Co-op program to expand my te
 │
 └── README.md
 ```
-
 * **📚 School Projects**
   * Projects completed as part of coursework or group assignments.
   * Focus on learning outcomes and collaboration
   * May include team-based work
-
 * **🚀 Personal Projects**
   * Independently developed projects to explore ideas and demonstrate skills.
   * Focus on problem-solving and practical implementation
   * Structured to be reproducible and easy to understand
-
 * **📌 Note**
   * Each project is organized as an independent folder and may include:
   * README.md for project description
   * notebooks/ for exploration and analysis
-  * src/ for core Python code
   * requirements.txt for dependencies
   * outputs/ for results and visualizations
+ 
