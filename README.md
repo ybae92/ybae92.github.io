@@ -26,8 +26,8 @@ Currently, I am in Canada, pursuing a Data Science Co-op program to expand my te
 
  ---
 ### 📁 Project Structure
-'''
- .
+```
+.
 ├── school-projects/
 │   ├── project-a/
 │   └── project-b/
@@ -38,7 +38,7 @@ Currently, I am in Canada, pursuing a Data Science Co-op program to expand my te
 │   └── project-3/
 │
 └── README.md
-'''
+```
 
 * **📚 School Projects**
 * Projects completed as part of coursework or group assignments.
