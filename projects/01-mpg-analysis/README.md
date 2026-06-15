@@ -1,62 +1,36 @@
 # MPG Analysis
 
 ## 📌 Project Overview
-Briefly describe the problem you are solving and why it matters.
-Example:
-This project analyzes lifestyle data to predict sleep quality using machine learning techniques.
+This project analyzes the key factors that influence vehicle fule efficiency (MPG) using exploration data analysis and data visualization techniques.
+Presentation : https://canva.link/r94ay52jpwd9xxv
 
 ---
 ## 🎯 Problem Statement
 What question are you trying to answer?
-- What factors affect sleep quality?
-- Can we predict sleep quality based on behavior data?
+- What factors affect vehicle fuel efficiency?
 
 ---
 ## 📊 Dataset
-- Source: Kaggle / public dataset / generated data
-- Size: (e.g. 10,000 rows, 12 features)
-- Features: age, stress level, screen time, etc.
+- Source: Kaggle / public dataset /
+- Size: 398 rows, 9 features
+- Features: mpg, cylinders, horsepower, weight etc.
 
 ---
 ## 🧹 Data Preprocessing
+- Data Exploration
 - Handled missing values
-- Encoded categorical variables
-- Scaled numerical features
-- Removed outliers
-
----
-## 🧠 Methodology
-- Exploratory Data Analysis (EDA)
-- Feature Engineering
-- Model Selection:
-  - Linear Regression / Random Forest / XGBoost
-- Train-test split (80/20)
-
----
-## 📈 Results
-- Accuracy: XX%
-- RMSE: XX
-- F1-score: XX
-
-(Optional: add chart or screenshot)
+- Data Visualization
 
 ---
 ## 🔍 Key Insights
-- Feature A had the strongest impact
-- Model improved after feature engineering
-- Unexpected correlation found between X and Y
+- Compact cars demondstrate the highest fuel efficiency (MPG)
+- Vehicle fule efficiency has steadily improved over time
 
 ---
 ## 🛠 Tech Stack
-- Python
-- Pandas
-- NumPy
-- Scikit-learn
-- Matplotlib / Seaborn
+- Python (Pandas, Matplotlib)
 
 ---
 ## 👤 My Role (for team projects)
-- Data cleaning
-- Feature engineering
-- Model training
-- Visualization
+- Data cleaning (Handling the missing values, Create new features)
+- Find the Key insight
