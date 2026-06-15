@@ -11,7 +11,7 @@ Below are selected projects demonstrating data analysis, machine learning, and v
 - Techniques: Data Analysis, Visualization
 - Tools: Python, Pandas, Matplotlib
 
-👉 [View Project](./projects/mpg-analysis)
+👉 [View Project](./projects/01-mpg-analysis)
 
 ---
 
@@ -21,7 +21,7 @@ Below are selected projects demonstrating data analysis, machine learning, and v
 - Techniques: Classification, Feature Engineering
 - Tools: Python, ML models
 
-👉 [View Project](./projects/sleep-analysis)
+👉 [View Project](./projects/02-sleep-analysis)
 
 ---
 
@@ -31,7 +31,7 @@ Below are selected projects demonstrating data analysis, machine learning, and v
 - Techniques: Data Analysis, Visualization
 - Tools: Python, Matplotlib
 
-👉 [View Project](./projects/marketing-campaign-analysis)
+👉 [View Project](./projects/03-marketing-campaign-analysis)
 
 ---
 
@@ -41,4 +41,4 @@ Below are selected projects demonstrating data analysis, machine learning, and v
 - Techniques: Correlation Analysis, EDA
 - Tools: Python, Seaborn
 
-👉 [View Project](./projects/world-happiness-analysis)
+👉 [View Project](./projects/04-world-happiness-analysis)
