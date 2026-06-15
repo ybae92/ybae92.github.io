@@ -6,8 +6,7 @@ This project analyzes the key factors that influence vehicle fule efficiency (MP
 
 ---
 ## 🎯 Problem Statement
-What question are you trying to answer?
-- What factors affect vehicle fuel efficiency?
+What factors affect vehicle fuel efficiency (MPG)?
 
 ---
 ## 📊 Dataset
@@ -17,20 +16,26 @@ What question are you trying to answer?
 
 ---
 ## 🧹 Data Preprocessing
-- Data Exploration
+- Data Exploration and cleaning
 - Handled missing values
-- Data Visualization
+- Feature selecting and visualization preparation
 
 ---
 ## 🔍 Key Insights
 - Compact cars demondstrate the highest fuel efficiency (MPG)
 - Vehicle fule efficiency has steadily improved over time
+- Heavier vehicels tent to have lower MPG
 
 ---
 ## 🛠 Tech Stack
-- Python (Pandas, Matplotlib)
+- Python
+- Pandas
+- Matplotlib
+- Seaborn
 
 ---
 ## 👤 My Role (for team projects)
-- Data cleaning (Handling the missing values, Create new features)
-- Find the Key insight
+- Data cleaning and preprocessing (handling missing values, feature engineering)
+- Exploratory data analysis (EDA)
+- Identifying key insights and visualization
+
