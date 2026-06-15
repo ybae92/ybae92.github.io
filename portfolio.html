@@ -14,6 +14,7 @@
             --point-orange: #f38435; 
             --badge-bg: #fff7ed; 
             --card-border: #e2e8f0;
+            --github-black: #24292e;
         }
 
         body { 
@@ -32,7 +33,7 @@
 
         .main-header {
             text-align: center;
-            margin-bottom: 80px;
+            margin-bottom: 40px;
         }
         .main-header h1 {
             font-size: 3rem;
@@ -43,6 +44,35 @@
         .main-header p {
             font-size: 1.1rem;
             color: var(--text-gray);
+        }
+
+        /* GitHub Profile Link Styling */
+        .github-profile-section {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+        .github-link-card {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background-color: white;
+            padding: 12px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            color: var(--github-black);
+            font-weight: 700;
+            border: 1px solid var(--card-border);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .github-link-card:hover {
+            border-color: var(--primary-blue);
+            color: var(--primary-blue);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+        .github-link-card i {
+            font-size: 1.4rem;
         }
 
         .section-header-wrapper {
@@ -180,6 +210,14 @@
             <p>Visual records of my technical journey and solutions</p>
         </div>
 
+        <!-- 깃허브 링크 섹션 추가됨 -->
+        <div class="github-profile-section">
+            <a href="https://github.com/ybae92" class="github-link-card" target="_blank">
+                <i class="fab fa-github"></i>
+                <span>Visit My GitHub Profile</span>
+            </a>
+        </div>
+
         <div class="section-header-wrapper">
             <div class="section-title-group">
                 <div class="orange-bar"></div>
@@ -197,62 +235,36 @@
             <div class="portfolio-grid">
                 <!-- 카드 1 -->
                 <div class="portfolio-card">
+                    <div class="icon-circle"><i class="fas fa-car"></i></div>
+                    <h3>MPG Prediction</h3>
+                    <div class="tag-container"><span class="tag">Regression</span><span class="tag">EDA</span></div>
+                    <p>Statistical analysis and regression modeling for vehicle fuel efficiency.</p>
+                    <a href="https://github.com/ybae92/ybae92.github.io/blob/main/projects/01-mpg-analysis" class="btn-link" target="_blank">View Project <i class="fab fa-github"></i></a>
+                </div>
+                <!-- 카드 2 -->
+                <div class="portfolio-card">
                     <div class="icon-circle"><i class="fas fa-moon"></i></div>
                     <h3>Sleep Analysis</h3>
                     <div class="tag-container"><span class="tag">Python</span><span class="tag">ML</span></div>
                     <p>Machine learning model to analyze and predict sleep quality patterns.</p>
-                    <a href="https://github.com/ybae92/ybae92.github.io/blob/main/projects/DS_Sleep_analysis" class="btn-link" target="_blank">View Project <i class="fab fa-github"></i></a>
+                    <a href="https://github.com/ybae92/ybae92.github.io/blob/main/projects/02-sleep-analysis" class="btn-link" target="_blank">View Project <i class="fab fa-github"></i></a>
                 </div>
-
-                <!-- 카드 2 -->
+                <!-- 카드 3 -->
                 <div class="portfolio-card">
                     <div class="icon-circle"><i class="fas fa-car"></i></div>
                     <h3>MPG Prediction</h3>
                     <div class="tag-container"><span class="tag">Regression</span><span class="tag">EDA</span></div>
                     <p>Statistical analysis and regression modeling for vehicle fuel efficiency.</p>
-                    <a href="https://github.com/ybae92/ybae92.github.io/blob/main/projects/DS_MPG" class="btn-link" target="_blank">View Project <i class="fab fa-github"></i></a>
+                    <a href="https://github.com/ybae92/ybae92.github.io/blob/main/projects/03-marketing-campaign-analysis" class="btn-link" target="_blank">View Project <i class="fab fa-github"></i></a>
                 </div>
-                
-                <!-- 카드 3 -->
-                <div class="portfolio-card">
-                    <div class="icon-circle"><i class="fas fa-brain"></i></div>
-                    <h3>Anomaly Detect</h3>
-                    <div class="tag-container"><span class="tag">Logs</span><span class="tag">AI</span></div>
-                    <p>System log analysis for early detection of infrastructure anomalies.</p>
-                    <a href="#" class="btn-link">View Project <i class="fab fa-github"></i></a>
-                </div>
-
                 <!-- 카드 4 -->
                 <div class="portfolio-card">
-                    <div class="icon-circle"><i class="fas fa-brain"></i></div>
-                    <h3>Anomaly Detect</h3>
-                    <div class="tag-container"><span class="tag">Logs</span><span class="tag">AI</span></div>
-                    <p>System log analysis for early detection of infrastructure anomalies.</p>
-                    <a href="#" class="btn-link">View Project <i class="fab fa-github"></i></a>
+                    <div class="icon-circle"><i class="fas fa-car"></i></div>
+                    <h3>MPG Prediction</h3>
+                    <div class="tag-container"><span class="tag">Regression</span><span class="tag">EDA</span></div>
+                    <p>Statistical analysis and regression modeling for vehicle fuel efficiency.</p>
+                    <a href="https://github.com/ybae92/ybae92.github.io/blob/main/projects/04-world-happiness-analysis" class="btn-link" target="_blank">View Project <i class="fab fa-github"></i></a>
                 </div>
-
-                <!-- 카드 4 ~ 6 (생략/추가 가능) -->
-                <!-- <div class="portfolio-card">
-                    <div class="icon-circle"><i class="fas fa-users"></i></div>
-                    <h3>Segmentation</h3>
-                    <div class="tag-container"><span class="tag">Clustering</span></div>
-                    <p>Customer behavior analysis using unsupervised learning techniques.</p>
-                    <a href="#" class="btn-link">View Project <i class="fab fa-github"></i></a>
-                </div>
-                <div class="portfolio-card">
-                    <div class="icon-circle"><i class="fas fa-language"></i></div>
-                    <h3>Sentiment NLP</h3>
-                    <div class="tag-container"><span class="tag">NLP</span></div>
-                    <p>Natural language processing for sentiment analysis of reviews.</p>
-                    <a href="#" class="btn-link">View Project <i class="fab fa-github"></i></a>
-                </div>
-                <div class="portfolio-card">
-                    <div class="icon-circle"><i class="fas fa-chart-line"></i></div>
-                    <h3>Sales Forecast</h3>
-                    <div class="tag-container"><span class="tag">Time-Series</span></div>
-                    <p>Forecasting retail sales patterns using deep learning models.</p>
-                    <a href="#" class="btn-link">View Project <i class="fab fa-github"></i></a>
-                </div> -->
             </div>
         </div>
 
