@@ -2,7 +2,7 @@
 
 ## 📌 Project Overview
 This project analyzes the key factors that influence vehicle fule efficiency (MPG) using exploration data analysis and data visualization techniques.
-Presentation : https://canva.link/r94ay52jpwd9xxv
+- Presentation : https://canva.link/r94ay52jpwd9xxv
 
 ---
 ## 🎯 Problem Statement
