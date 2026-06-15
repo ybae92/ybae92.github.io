@@ -8,9 +8,8 @@ Below are selected projects demonstrating data analysis, machine learning, and v
 ## 🚗 1. MPG Analysis
 **Goal:** Predict fuel efficiency (MPG) based on car features
 
-- Techniques: Regression, EDA
-- Tools: Python, Pandas, Scikit-learn
-- Key Result: RMSE reduced after feature engineering
+- Techniques: Data Analysis, Visualization
+- Tools: Python, Pandas, Matplotlib
 
 👉 [View Project](./projects/mpg-analysis)
 
@@ -21,7 +20,6 @@ Below are selected projects demonstrating data analysis, machine learning, and v
 
 - Techniques: Classification, Feature Engineering
 - Tools: Python, ML models
-- Key Result: Achieved 89% accuracy
 
 👉 [View Project](./projects/sleep-analysis)
 
@@ -32,7 +30,6 @@ Below are selected projects demonstrating data analysis, machine learning, and v
 
 - Techniques: Data Analysis, Visualization
 - Tools: Python, Matplotlib
-- Key Insight: High response rate from segment A
 
 👉 [View Project](./projects/marketing-campaign-analysis)
 
@@ -43,6 +40,5 @@ Below are selected projects demonstrating data analysis, machine learning, and v
 
 - Techniques: Correlation Analysis, EDA
 - Tools: Python, Seaborn
-- Key Insight: GDP and social support strongly correlated
 
 👉 [View Project](./projects/world-happiness-analysis)
