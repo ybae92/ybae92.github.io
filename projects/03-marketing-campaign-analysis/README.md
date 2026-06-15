@@ -1,45 +1,58 @@
-# Sleep Analysis
+# 📈 Marketing Campaign Analysis
 
 ## 📌 Project Overview
-This project analyzes the key factors that influence sleep quality using exploration data analysis (EDA) and data visualization techniques.
-Data preprocessing was performed using PostgresSQL, and the processed data was imported into Python using psycopg2 for analysis
-- Presentation : https://canva.link/gx878bzr61d210j
+This project analyzes marketing-related data by building a data pipeline using PostgreSQL and PL/pgSQL.  
+A structured VIEW was created in the database layer, and the processed data was imported into Python using psycopg2 for visualization and analysis.
+- Presentation: https://canva.link/2apkpvj3c1kso7m
 
 ---
+
 ## 🎯 Problem Statement
-What factors affect sleep quality?
+What factors influence customer behavior and marketing performance?
 
 ---
+
 ## 📊 Dataset
-- Source: Kaggle / public dataset /
-- Size: 15000 rows, 13 features
-- Features: Occupation, Daily Screen Time Hours, Sleep Quality, Strees Level etc.
+- Source: Kaggle / public marketing dataset
+- Size: 10,000 rows, 11 features
+- Features: Channel, Impressions, Clicks, Cost_USD, Revenue_USD, ROI etc.
 
 ---
-## 🧹 Data Preprocessing
-- Data cleaning and transformation using PostgreSQL
-- SQL-based filtering and preprocessing before analysis
-- Data exraction into Python into psycopg2
-- Exploratory data analysis (EDA) and visualization in Python
+
+## 🧹 Data Processing (SQL Layer)
+- Data preprocessing performed in PostgreSQL using SQL and PL/pgSQL
+- Created a reusable VIEW to structure and clean raw marketing data
+- Applied filtering and transformation logic at the database level
+- Queried the final VIEW from Python using psycopg2
 
 ---
+
+## 📊 Analysis & Visualization (Python Layer)
+- Imported processed data from PostgreSQL into Python
+- Conducted exploratory data analysis (EDA)
+- Built visualizations to identify customer patterns and marketing insights
+
+---
+
 ## 🔍 Key Insights
-- Higher stress levels are stronglt associated with lower sleep quality
-- Increased screean time negatively affects sleep quality
-- Regular physical activity improves sleep quality
+- Certain customer segments show significantly higher engagement rates
+- Marketing campaign effectiveness varies across demographics
+- Spending behavior is strongly correlated with campaign response
 
 ---
+
 ## 🛠 Tech Stack
-- PostSQL (data preprocessing)
+- PostgreSQL (SQL + PL/pgSQL)
 - Python
 - psycopg2
 - Pandas
 - Matplotlib
+- Seaborn
 
 ---
-## 👤 My Role (for team projects)
-- Desighned and executed SQL queries for data preprocessing
-- Connected PostgreSQL database to Python using psycopg2
-- Perfomred EDA and visualization
-- Derived key insight from the dataset
 
+## 👤 My Role
+- Designed and implemented SQL queries and PL/pgSQL views
+- Built data pipeline between PostgreSQL and Python using psycopg2
+- Performed EDA and visualization
+- Extracted key marketing insights from the dataset
