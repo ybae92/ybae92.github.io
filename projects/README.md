@@ -11,7 +11,7 @@ Below are selected projects demonstrating data analysis, machine learning, and v
 - Techniques: Data Analysis, Visualization
 - Tools: Python, Pandas, Matplotlib
 
-👉 [View Project](./projects/01-mpg-analysis)
+👉 [View Project](./projects/01-mpg-analysis/README.md)
 
 ---
 
