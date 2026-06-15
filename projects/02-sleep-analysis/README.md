@@ -1,36 +1,45 @@
-# MPG Analysis
+# Sleep Analysis
 
 ## 📌 Project Overview
-This project analyzes the key factors that influence vehicle fule efficiency (MPG) using exploration data analysis and data visualization techniques.
-Presentation : https://canva.link/r94ay52jpwd9xxv
+This project analyzes the key factors that influence sleep quality using exploration data analysis (EDA) and data visualization techniques.
+Data preprocessing was performed using PostgresSQL, and the processed data was imported into Python using psycopg2 for analysis
+- Presentation : https://canva.link/gx878bzr61d210j
 
 ---
 ## 🎯 Problem Statement
-What question are you trying to answer?
-- What factors affect vehicle fuel efficiency?
+What factors affect sleep quality?
 
 ---
 ## 📊 Dataset
 - Source: Kaggle / public dataset /
-- Size: 398 rows, 9 features
-- Features: mpg, cylinders, horsepower, weight etc.
+- Size: 15000 rows, 13 features
+- Features: Occupation, Daily Screen Time Hours, Sleep Quality, Strees Level etc.
 
 ---
 ## 🧹 Data Preprocessing
-- Data Exploration
-- Handled missing values
-- Data Visualization
+- Data cleaning and transformation using PostgreSQL
+- SQL-based filtering and preprocessing before analysis
+- Data exraction into Python into psycopg2
+- Exploratory data analysis (EDA) and visualization in Python
 
 ---
 ## 🔍 Key Insights
-- Compact cars demondstrate the highest fuel efficiency (MPG)
-- Vehicle fule efficiency has steadily improved over time
+- Higher stress levels are stronglt associated with lower sleep quality
+- Increased screean time negatively affects sleep quality
+- Regular physical activity improves sleep quality
 
 ---
 ## 🛠 Tech Stack
-- Python (Pandas, Matplotlib)
+- PostSQL (data preprocessing)
+- Python
+- psycopg2
+- Pandas
+- Matplotlib
 
 ---
 ## 👤 My Role (for team projects)
-- Data cleaning (Handling the missing values, Create new features)
-- Find the Key insight
+- Desighned and executed SQL queries for data preprocessing
+- Connected PostgreSQL database to Python using psycopg2
+- Perfomred EDA and visualization
+- Derived key insight from the dataset
+
