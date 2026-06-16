@@ -9,7 +9,7 @@ Below are selected projects demonstrating data analysis, machine learning, and v
 **Goal:** Predict fuel efficiency (MPG) based on car features
 
 - Techniques: Data Analysis, Visualization
-- Tools: Python, Pandas, Matplotlib
+- Tools: Python, Pandas, Matplotlib, Seaborn
 
 👉 [View Project](./01-mpg-analysis)
 
@@ -19,7 +19,7 @@ Below are selected projects demonstrating data analysis, machine learning, and v
 **Goal:** Analyze lifestyle factors affecting sleep quality
 
 - Techniques: Classification, Feature Engineering
-- Tools: Python, Pandas, Matplotlib, 
+- Tools: PostgreSQL, Python, Psycopg2, Pandas, Matplotlib, Seanborn
 
 👉 [View Project](./02-sleep-analysis)
 
@@ -29,7 +29,7 @@ Below are selected projects demonstrating data analysis, machine learning, and v
 **Goal:** Evaluate campaign effectiveness and customer response
 
 - Techniques: Data Analysis, Visualization
-- Tools: Python, Matplotlib
+- Tools: PostgreSQL(PL/pgSQL), Python, Pandas, Ydata_Profiling, Matplotlib, Seaborn
 
 👉 [View Project](./03-marketing-campaign-analysis)
 
@@ -39,6 +39,6 @@ Below are selected projects demonstrating data analysis, machine learning, and v
 **Goal:** Identify factors influencing global happiness index
 
 - Techniques: Correlation Analysis, EDA
-- Tools: Python, Seaborn
+- Tools: Python, Pandas, Numpy, Ydata_Profiling, SciPy, Matplotlib, Seaborn
 
 👉 [View Project](./04-world-happiness-analysis)
