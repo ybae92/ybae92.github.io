@@ -17,8 +17,8 @@ In particular, an A/B testing framework was used to compare different data colle
 
 ## 📊 Dataset
 - Source: World Happiness Report (Kaggle / public dataset)
-- Features: GDP per capita, social support, life expectancy, freedom, generosity, corruption perception, happiness score, etc.
-- Type: Cross-country socio-economic dataset
+- Size: 2,363 rows, 11 features
+- Features: GDP per capita, happiness score, positive affect, negative affect, social support, freedom, generosity, corruption perception, etc.
 
 ---
 
