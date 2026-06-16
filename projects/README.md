@@ -8,8 +8,10 @@ Below are selected projects demonstrating data analysis, machine learning, and v
 ## 🚗 1. MPG Analysis
 **Goal:** Predict fuel efficiency (MPG) based on car features
 
-- Techniques: Data Analysis, Visualization
-- Tools: Python, Pandas, Matplotlib, Seaborn
+- Tools & Technologies
+-   Programming Language: Python
+-   Data Namipulation: Pandas
+-   Visulization: Matplotlib, Seaborn
 
 👉 [View Project](./01-mpg-analysis)
 
