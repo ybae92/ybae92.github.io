@@ -30,11 +30,12 @@ What factors affect sleep quality?
 
 ---
 ## 🛠 Tech Stack
-- PostSQL (data preprocessing)
+- PostgreSQL (data preprocessing)
 - Python
 - psycopg2
 - Pandas
 - Matplotlib
+- Seaborn
 
 ---
 ## 👤 My Role (for team projects)
