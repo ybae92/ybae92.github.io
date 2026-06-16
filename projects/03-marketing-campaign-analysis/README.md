@@ -42,10 +42,11 @@ What factors influence customer behavior and marketing performance?
 ---
 
 ## 🛠 Tech Stack
-- PostgreSQL (SQL + PL/pgSQL)
+- PostgreSQL (PL/pgSQL)
 - Python
 - psycopg2
 - Pandas
+- Ydata_Profiling
 - Matplotlib
 - Seaborn
 
