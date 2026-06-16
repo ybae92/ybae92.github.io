@@ -9,12 +9,16 @@
         :root {
             --primary-blue: #0056b3;
             --bg-gray: #f8fafc;
-            --text-dark: #334155; 
+            --text-dark: #1e293b; 
             --text-gray: #64748b;
             --point-orange: #f38435; 
             --badge-bg: #fff7ed; 
             --card-border: #e2e8f0;
             --github-black: #24292e;
+            --tag-tech: #e0f2fe; /* Light Blue */
+            --tag-tech-text: #0369a1;
+            --tag-tool: #f1f5f9; /* Light Gray */
+            --tag-tool-text: #475569;
         }
 
         body { 
@@ -23,10 +27,11 @@
             color: var(--text-dark); 
             margin: 0;
             padding: 80px 0;
+            line-height: 1.5;
         }
 
         .container { 
-            max-width: 1100px; 
+            max-width: 1200px; 
             margin: 0 auto; 
             padding: 0 20px; 
         }
@@ -46,7 +51,6 @@
             color: var(--text-gray);
         }
 
-        /* GitHub Profile Link Styling */
         .github-profile-section {
             text-align: center;
             margin-bottom: 80px;
@@ -71,9 +75,6 @@
             transform: translateY(-3px);
             box-shadow: 0 10px 20px rgba(0,0,0,0.08);
         }
-        .github-link-card i {
-            font-size: 1.4rem;
-        }
 
         .section-header-wrapper {
             display: flex;
@@ -81,6 +82,7 @@
             justify-content: space-between;
             margin-bottom: 30px;
             padding-bottom: 10px;
+            border-bottom: 2px solid #eef2f6;
         }
 
         .section-title-group {
@@ -91,13 +93,13 @@
 
         .orange-bar {
             width: 6px;
-            height: 40px;
+            height: 35px;
             background-color: var(--point-orange);
             border-radius: 2px;
         }
 
         .section-title {
-            font-size: 2.2rem;
+            font-size: 1.8rem;
             font-weight: 800;
             color: var(--text-dark);
             margin: 0;
@@ -106,10 +108,10 @@
         .project-badge {
             background-color: var(--badge-bg);
             color: var(--point-orange);
-            padding: 6px 16px;
+            padding: 4px 14px;
             border-radius: 30px;
             font-weight: 700;
-            font-size: 1rem;
+            font-size: 0.9rem;
         }
 
         .toggle-btn {
@@ -117,85 +119,130 @@
             border: none;
             color: var(--text-gray);
             cursor: pointer;
-            font-size: 1rem;
+            font-size: 0.95rem;
             font-weight: 600;
             display: flex;
             align-items: center;
             gap: 8px;
-            transition: 0.3s;
         }
-        .toggle-btn:hover { color: var(--primary-blue); }
-        .toggle-btn i { transition: transform 0.3s ease; }
-        .toggle-btn.active i { transform: rotate(180deg); }
 
         #project-list {
             overflow: hidden;
-            transition: max-height 0.5s ease-out, opacity 0.3s ease;
-            max-height: 2000px;
-            opacity: 1;
+            transition: max-height 0.5s ease-out;
+            max-height: 5000px;
         }
         #project-list.collapsed {
             max-height: 0;
-            opacity: 0;
-            pointer-events: none;
         }
 
         .portfolio-grid { 
             display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
-            gap: 30px; 
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+            gap: 25px; 
             padding-top: 10px;
         }
         
         .portfolio-card { 
             background: white; 
-            border-radius: 20px; 
-            padding: 45px 30px;
-            text-align: center;
+            border-radius: 24px; 
+            padding: 40px 30px;
             border: 1px solid var(--card-border); 
             transition: all 0.3s ease;
             display: flex;
             flex-direction: column;
-            align-items: center;
+            position: relative;
         }
 
         .portfolio-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.06);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
             border-color: var(--primary-blue);
         }
 
-        .icon-circle {
-            width: 85px;
-            height: 85px;
-            background-color: #eff6ff;
-            border-radius: 50%;
+        .card-icon {
+            font-size: 2rem;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+            background: #f0f7ff;
+            width: 60px;
+            height: 60px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 30px;
+            border-radius: 16px;
         }
-        .icon-circle i { font-size: 2.5rem; color: var(--primary-blue); }
 
         .portfolio-card h3 { 
-            font-size: 1.6rem; 
-            margin: 0 0 15px 0; 
-            color: var(--primary-blue);
-            font-weight: 700;
+            font-size: 1.5rem; 
+            margin: 0 0 10px 0; 
+            color: var(--text-dark);
+            font-weight: 800;
         }
 
-        .tag-container { display: flex; justify-content: center; gap: 8px; margin-bottom: 25px; }
-        .tag { background: #f1f5f9; color: #475569; padding: 5px 14px; border-radius: 10px; font-size: 0.85rem; font-weight: 600; }
+        .project-theme {
+            font-size: 0.95rem;
+            color: var(--text-gray);
+            margin-bottom: 25px;
+            line-height: 1.6;
+            min-height: 45px;
+        }
 
-        .portfolio-card p { font-size: 1rem; color: var(--text-gray); margin-bottom: 35px; line-height: 1.6; min-height: 3.2em; }
+        /* 상세 정보 섹션 스타일 */
+        .info-group {
+            margin-bottom: 18px;
+        }
         
-        .btn-link { 
-            display: inline-flex; align-items: center; gap: 10px;
-            border: 1.5px solid var(--primary-blue); background: transparent;
-            color: var(--primary-blue); text-decoration: none; font-weight: 700; 
-            font-size: 1rem; padding: 10px 24px; border-radius: 12px; transition: 0.3s;
+        .info-label {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-gray);
+            margin-bottom: 8px;
         }
-        .btn-link:hover { background: var(--primary-blue); color: white; }
+
+        .tag-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .tag {
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .tag.tech {
+            background-color: var(--tag-tech);
+            color: var(--tag-tech-text);
+        }
+
+        .tag.tool {
+            background-color: var(--tag-tool);
+            color: var(--tag-tool-text);
+        }
+
+        .btn-link { 
+            margin-top: auto;
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+            gap: 8px;
+            background: #1e293b;
+            color: white; 
+            text-decoration: none; 
+            font-weight: 600; 
+            font-size: 0.9rem; 
+            padding: 12px; 
+            border-radius: 12px; 
+            transition: 0.3s;
+        }
+        .btn-link:hover { background: var(--primary-blue); }
 
         .back-home { text-align: center; margin-top: 100px; }
         .back-home a { color: var(--text-gray); text-decoration: none; font-size: 0.95rem; }
@@ -210,7 +257,6 @@
             <p>Visual records of my technical journey and solutions</p>
         </div>
 
-        <!-- Add Github Link -->
         <div class="github-profile-section">
             <a href="https://github.com/ybae92" class="github-link-card" target="_blank">
                 <i class="fab fa-github"></i>
@@ -222,53 +268,129 @@
             <div class="section-title-group">
                 <div class="orange-bar"></div>
                 <h2 class="section-title">Data Science</h2>
-                <div class="project-badge">6 Projects</div>
+                <div class="project-badge">4 Projects</div>
             </div>
             
             <button class="toggle-btn" onclick="toggleProjects()">
                 <span id="toggle-text">Hide Projects</span> 
-                <i class="fas fa-chevron-up"></i>
+                <i class="fas fa-chevron-up" id="toggle-icon"></i>
             </button>
         </div>
 
         <div id="project-list">
             <div class="portfolio-grid">
-                <!-- 카드 1 -->
+                
+                <!-- 카드 1: MPG Analysis -->
                 <div class="portfolio-card">
-                    <div class="icon-circle"><i class="fas fa-car"></i></div>
+                    <div class="card-icon"><i class="fas fa-car"></i></div>
                     <h3>MPG Analysis</h3>
-                    <div class="tag-container"><span class="tag">EDA, Preprocessing, Visualization</span></div>
-                    <div class="tag-container"><span class="tag">Python, Pandas, Matplotlib, Seaborn</span></div>
-                    <p>Predict fuel efficiency (MPG) based on car features.</p>
-                    <a href="https://github.com/ybae92/ybae92.github.io/blob/main/projects/01-mpg-analysis" class="btn-link" target="_blank">View Project <i class="fab fa-github"></i></a>
+                    <p class="project-theme">Automobile fuel efficiency analysis and factor identification using statistical exploration.</p>
+                    
+                    <div class="info-group">
+                        <div class="info-label"><i class="fas fa-brain"></i> Technology</div>
+                        <div class="tag-wrap">
+                            <span class="tag tech">EDA</span>
+                            <span class="tag tech">Preprocessing</span>
+                            <span class="tag tech">Visualization</span>
+                        </div>
+                    </div>
+
+                    <div class="info-group">
+                        <div class="info-label"><i class="fas fa-wrench"></i> Tools</div>
+                        <div class="tag-wrap">
+                            <span class="tag tool">Python</span>
+                            <span class="tag tool">Pandas</span>
+                            <span class="tag tool">Matplotlib</span>
+                            <span class="tag tool">Seaborn</span>
+                        </div>
+                    </div>
+                    
+                    <a href="https://github.com/ybae92/..." class="btn-link" target="_blank">View on GitHub <i class="fab fa-github"></i></a>
                 </div>
-                <!-- 카드 2 -->
+
+                <!-- 카드 2: Sleep Analysis -->
                 <div class="portfolio-card">
-                    <div class="icon-circle"><i class="fas fa-moon"></i></div>
-                    <h3>Sleep Analysis</h3>
-                    <div class="tag-container"><span class="tag">EDA, Preprocessing, Visualization</span></div>
-                    <div class="tag-container"><span class="tag">PostgreSQL, Python, Psycopg2, Pandas, Matplotlib, Seaborn</span></div>
-                    <p>Analyze lifestyle factors affecting sleep quality.</p>
-                    <a href="https://github.com/ybae92/ybae92.github.io/blob/main/projects/02-sleep-analysis" class="btn-link" target="_blank">View Project <i class="fab fa-github"></i></a>
+                    <div class="card-icon"><i class="fas fa-moon"></i></div>
+                    <h3>Sleep Quality Analysis</h3>
+                    <p class="project-theme">Analyzing the correlation between lifestyle habits (caffeine, exercise) and sleep efficiency.</p>
+                    
+                    <div class="info-group">
+                        <div class="info-label"><i class="fas fa-brain"></i> Technology</div>
+                        <div class="tag-wrap">
+                            <span class="tag tech">Statistical Analysis</span>
+                            <span class="tag tech">Data Cleaning</span>
+                            <span class="tag tech">DB Connection</span>
+                        </div>
+                    </div>
+
+                    <div class="info-group">
+                        <div class="info-label"><i class="fas fa-wrench"></i> Tools</div>
+                        <div class="tag-wrap">
+                            <span class="tag tool">PostgreSQL</span>
+                            <span class="tag tool">Psycopg2</span>
+                            <span class="tag tool">Python</span>
+                            <span class="tag tool">Pandas</span>
+                        </div>
+                    </div>
+                    
+                    <a href="https://github.com/ybae92/..." class="btn-link" target="_blank">View on GitHub <i class="fab fa-github"></i></a>
                 </div>
-                <!-- 카드 3 -->
+
+                <!-- 카드 3: Marketing Campaign -->
                 <div class="portfolio-card">
-                    <div class="icon-circle"><i class="fas fa-marketing"></i></div>
-                    <h3>Marketing Campaign Analysis</h3>
-                    <div class="tag-container"><span class="tag">EDA, Preprocessing, Correlation, Visualization</span></div>
-                    <div class="tag-container"><span class="tag">PostgreSQL, Python, PL/pgSQL, Psycopg2, Pandas, Ydata_Profiling, Matplotlib, Seaborn</span></div>
-                    <p>Evaluate campaign effectiveness and customer response.</p>
-                    <a href="https://github.com/ybae92/ybae92.github.io/blob/main/projects/03-marketing-campaign-analysis" class="btn-link" target="_blank">View Project <i class="fab fa-github"></i></a>
+                    <div class="card-icon"><i class="fas fa-bullhorn"></i></div>
+                    <h3>Marketing Campaign</h3>
+                    <p class="project-theme">Evaluating campaign ROI and customer response patterns to optimize marketing spend.</p>
+                    
+                    <div class="info-group">
+                        <div class="info-label"><i class="fas fa-brain"></i> Technology</div>
+                        <div class="tag-wrap">
+                            <span class="tag tech">Correlation Analysis</span>
+                            <span class="tag tech">Automated Profiling</span>
+                            <span class="tag tech">PL/pgSQL</span>
+                        </div>
+                    </div>
+
+                    <div class="info-group">
+                        <div class="info-label"><i class="fas fa-wrench"></i> Tools</div>
+                        <div class="tag-wrap">
+                            <span class="tag tool">PostgreSQL</span>
+                            <span class="tag tool">Ydata-Profiling</span>
+                            <span class="tag tool">Seaborn</span>
+                        </div>
+                    </div>
+                    
+                    <a href="https://github.com/ybae92/..." class="btn-link" target="_blank">View on GitHub <i class="fab fa-github"></i></a>
                 </div>
-                <!-- 카드 4 -->
+
+                <!-- 카드 4: Happiness Analysis -->
                 <div class="portfolio-card">
-                    <div class="icon-circle"><i class="fas fa-smile"></i></div>
-                    <h3>MPG Prediction</h3>
-                    <div class="tag-container"><span class="tag">Preprocessing</span><span class="tag">EDA</span></div>
-                    <div class="tag-container"><span class="tag">Python, Pandas, Numpy, Ydata_Profiling, SciPy, Matplotlib, Seaborn</span></div>
-                    <p>Statistical analysis and regression modeling for vehicle fuel efficiency.</p>
-                    <a href="https://github.com/ybae92/ybae92.github.io/blob/main/projects/04-world-happiness-analysis" class="btn-link" target="_blank">View Project <i class="fab fa-github"></i></a>
+                    <div class="card-icon"><i class="fas fa-smile"></i></div>
+                    <h3>World Happiness Analysis</h3>
+                    <p class="project-theme">Investigating socio-economic factors that contribute to national happiness levels globally.</p>
+                    
+                    <div class="info-group">
+                        <div class="info-label"><i class="fas fa-brain"></i> Technology</div>
+                        <div class="tag-wrap">
+                            <span class="tag tech">Regression Modeling</span>
+                            <span class="tag tech">Hypothesis Testing</span>
+                            <span class="tag tech">SciPy</span>
+                        </div>
+                    </div>
+
+                    <div class="info-group">
+                        <div class="info-label"><i class="fas fa-wrench"></i> Tools</div>
+                        <div class="tag-wrap">
+                            <span class="tag tool">Python</span>
+                            <span class="tag tool">Numpy</span>
+                            <span class="tag tool">SciPy</span>
+                            <span class="tag tool">Matplotlib</span>
+                        </div>
+                    </div>
+                    
+                    <a href="https://github.com/ybae92/..." class="btn-link" target="_blank">View on GitHub <i class="fab fa-github"></i></a>
                 </div>
+
             </div>
         </div>
 
@@ -280,9 +402,8 @@
     <script>
         function toggleProjects() {
             const list = document.getElementById('project-list');
-            const btn = document.querySelector('.toggle-btn');
             const text = document.getElementById('toggle-text');
-            const icon = btn.querySelector('i');
+            const icon = document.getElementById('toggle-icon');
 
             list.classList.toggle('collapsed');
             
