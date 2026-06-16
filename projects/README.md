@@ -19,7 +19,7 @@ Below are selected projects demonstrating data analysis, machine learning, and v
 **Goal:** Analyze lifestyle factors affecting sleep quality
 
 - Techniques: Classification, Feature Engineering
-- Tools: Python, ML models
+- Tools: Python, Pandas, Matplotlib, 
 
 👉 [View Project](./02-sleep-analysis)
 
