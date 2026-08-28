@@ -1,5 +1,5 @@
 # 📱 Mobile Price Classification — Research Paper Reproduction
-——-
+—
 
 ## 📌 Project Overview
 
@@ -9,7 +9,7 @@ The study focuses on predicting mobile phone price ranges based on hardware and 
 Research Paper: https://www.mdpi.com/2079-9292/14/11/2173
 Dataset: Mobile Price Classification Dataset
 
-——
+—
 ## 🎯 Problem Statement
 
 * Can mobile phone price ranges be accurately classified based on technical specifications?
