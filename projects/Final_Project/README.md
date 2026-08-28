@@ -6,9 +6,9 @@
 This project reproduces the machine learning experiments presented in the research paper “Mobile Price Classification” using the publicly available Mobile Price Classification dataset.
 The study focuses on predicting mobile phone price ranges based on hardware and technical specifications. The original experimental approach was reproduced and extended by comparing different machine learning models and hyperparameter optimization methods.
 
-Research Paper: https://www.mdpi.com/2079-9292/14/11/2173
-Dataset: Mobile Price Classification Dataset
-Presentation : https://canva.link/54jkxnnh3disa6s
+* Research Paper: https://www.mdpi.com/2079-9292/14/11/2173
+* Dataset: Mobile Price Classification Dataset
+* Presentation : https://canva.link/54jkxnnh3disa6s
 
 ## 🎯 Problem Statement
 
