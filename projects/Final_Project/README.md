@@ -1,5 +1,5 @@
 # 📱 Mobile Price Classification — Research Paper Reproduction
-—
+
 
 ## 📌 Project Overview
 
@@ -8,8 +8,8 @@ The study focuses on predicting mobile phone price ranges based on hardware and 
 
 Research Paper: https://www.mdpi.com/2079-9292/14/11/2173
 Dataset: Mobile Price Classification Dataset
+Presentation : https://canva.link/54jkxnnh3disa6s
 
-—
 ## 🎯 Problem Statement
 
 * Can mobile phone price ranges be accurately classified based on technical specifications?
@@ -21,7 +21,6 @@ Dataset: Mobile Price Classification Dataset
 
 ## 📊 Dataset
 
-—-
 Source: Kaggle — Mobile Price Classification Dataset
 Size: 2,000 observations, 21 columns
 Target Variable: price_range
@@ -54,19 +53,19 @@ The target variable represents four mobile phone price categories:
 * Touch screen
 * Wi-Fi
 
-—-
-### 🔄 Research Reproduction Workflow
 
-#### 1. Data Preparation
+## 🔄 Research Reproduction Workflow
+
+### 1. Data Preparation
 * Loaded the Mobile Price Classification dataset
 * Inspected dataset structure and feature types
 * Checked for missing values and potential data quality issues
 
-#### 2. Data Preprocessing
+### 2. Data Preprocessing
 * Checked missing values and outliers
 * Reviewed feature distributions
 
-#### 3. Data Splitting / Cross-Validation
+### 3. Data Splitting / Cross-Validation
 A 5-fold Stratified Cross-Validation approach was used:
 StratifiedKFold(
     n_splits=5,
@@ -76,7 +75,7 @@ StratifiedKFold(
 
 Stratification was used to maintain a similar distribution of the four price categories across folds.
 
-#### 4. Model Training
+### 4. Model Training
 The following models were implemented:
 
 * Baseline SVM
@@ -86,17 +85,19 @@ The following models were implemented:
 * Logistic Regression + Hyperopt
 * Logistic Regression + Optuna
 
-#### 5. Hyperparameter Optimization
+### 5. Hyperparameter Optimization
 
 Two optimization frameworks were used to investigate whether optimized hyperparameters could improve model performance.
 
 [Hyperopt]
+
 Used to search for optimal model parameters based on validation performance.
 
 [Optuna]
+
 Used for automated hyperparameter optimization with a defined search space.
 
-#### 6. Model Evaluation
+### 6. Model Evaluation
 
 Models were evaluated using:
 * Accuracy
@@ -106,11 +107,12 @@ Models were evaluated using:
 
 Macro-averaged metrics were used to evaluate performance across the four price categories.
 
-#### 7. Performance Comparison
+### 7. Performance Comparison
 
 The performance of all six approaches was compared:
 
 [Model Optimization] 
+
 *SVM	Baseline
 *SVM	Hyperopt
 *SVM	Optuna
@@ -119,16 +121,15 @@ The performance of all six approaches was compared:
 *Logistic Regression	Optuna
 The comparison focuses on whether hyperparameter optimization provides measurable improvements over baseline models.
 
-—-
+
 ## 📈 Experimental Approach
 
 The reproduction follows the general methodology described in the research paper:
-—-
+
 Dataset → Preprocessing → Cross-Validation → Model Training → Hyperparameter Optimization → Evaluation → Performance Comparison
-—-
+
 The reproduced experiments were then compared with the methodology and reported results from the original paper.
 
-—-
 ## 🔍 Key Insights
 
 * Mobile phone price ranges can be effectively classified using hardware and technical specifications.
@@ -139,13 +140,14 @@ The reproduced experiments were then compared with the methodology and reported 
 * Cross-validation provides a more robust estimate of model performance than relying on a single train/test split.
 * The final comparison helps identify which model and optimization strategy provides the best classification performance.
 
-—-
 ## 📊 Models Compared
 
 [SVM]
+
 Support Vector Machine was selected as the primary classification model and reproduced as a baseline before optimization.
 
 [SVM + Hyperopt]
+
 Hyperopt was used to optimize SVM hyperparameters such as:
 * C
 * gamma
@@ -153,15 +155,19 @@ Hyperopt was used to optimize SVM hyperparameters such as:
 * decision_function_shape
 
 [SVM + Optuna]
+
 Optuna was used to perform automated hyperparameter optimization over a predefined search space.
 
 [Logistic Regression]
+
 Logistic Regression was added as an additional classification model to provide a comparison with SVM.
 
 [Logistic Regression + Hyperopt]
+
 Hyperopt was used to search for suitable Logistic Regression hyperparameters.
 
 [Logistic Regression + Optuna]
+
 Optuna was used to optimize Logistic Regression parameters and compare the resulting performance with the baseline and Hyperopt models.
 
 —-
@@ -174,7 +180,6 @@ The following metrics were used:
 * F1-score — Harmonic mean of precision and recall
 
 Because this is a four-class classification problem, macro averaging was used to give equal importance to each price category.
-—-
 
 ## 🛠 Tech Stack
 
@@ -188,7 +193,6 @@ Because this is a four-class classification problem, macro averaging was used to
 * Seaborn
 * Jupyter Notebook
 
-—-
 ## 👤 My Role
 
 * Reproduced the methodology from the research paper
@@ -206,7 +210,6 @@ Because this is a four-class classification problem, macro averaging was used to
 * Created visualizations for model and data analysis
 * Analyzed differences between the reproduced experiments and the original research paper
 
-—-
 ## 📚 Reference
 
 [Research Paper]
