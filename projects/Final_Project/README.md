@@ -31,29 +31,6 @@ The target variable represents four mobile phone price categories:
 * 2 — Medium-high price
 * 3 — High price
 
-### Main Features:
-
-* Battery power
-* Bluetooth
-* Clock speed
-* Dual SIM
-* Front camera
-* Internal memory
-* Mobile depth
-* Mobile weight
-* Number of cores
-* Primary camera
-* Pixel height
-* Pixel width
-* RAM
-* Screen height
-* Screen width
-* Talk time
-* 3G / 4G
-* Touch screen
-* Wi-Fi
-
-
 ## 🔄 Research Reproduction Workflow
 
 ### 1. Data Preparation
@@ -108,27 +85,25 @@ Models were evaluated using:
 Macro-averaged metrics were used to evaluate performance across the four price categories.
 
 ### 7. Performance Comparison
-
 The performance of all six approaches was compared:
 
-[Model Optimization] 
+#### Model Optimization
 
-*SVM	Baseline
-*SVM	Hyperopt
-*SVM	Optuna
-*Logistic Regression	Baseline
-*Logistic Regression	Hyperopt
-*Logistic Regression	Optuna
+* SVM	Baseline
+* SVM	Hyperopt
+* SVM	Optuna
+* Logistic Regression	Baseline
+* Logistic Regression	Hyperopt
+* Logistic Regression	Optuna
+
 The comparison focuses on whether hyperparameter optimization provides measurable improvements over baseline models.
-
 
 ## 📈 Experimental Approach
 
-The reproduction follows the general methodology described in the research paper:
+* The reproduction follows the general methodology described in the research paper:
+    * Dataset → Preprocessing → Cross-Validation → Model Training → Hyperparameter Optimization → Evaluation → Performance Comparison
 
-Dataset → Preprocessing → Cross-Validation → Model Training → Hyperparameter Optimization → Evaluation → Performance Comparison
-
-The reproduced experiments were then compared with the methodology and reported results from the original paper.
+* The reproduced experiments were then compared with the methodology and reported results from the original paper.
 
 ## 🔍 Key Insights
 
@@ -142,32 +117,26 @@ The reproduced experiments were then compared with the methodology and reported 
 
 ## 📊 Models Compared
 
-[SVM]
-
+### SVM
 Support Vector Machine was selected as the primary classification model and reproduced as a baseline before optimization.
 
-[SVM + Hyperopt]
-
+### SVM + Hyperopt
 Hyperopt was used to optimize SVM hyperparameters such as:
 * C
 * gamma
 * kernel
 * decision_function_shape
 
-[SVM + Optuna]
-
+### SVM + Optuna
 Optuna was used to perform automated hyperparameter optimization over a predefined search space.
 
-[Logistic Regression]
-
+### Logistic Regression
 Logistic Regression was added as an additional classification model to provide a comparison with SVM.
 
-[Logistic Regression + Hyperopt]
-
+### Logistic Regression + Hyperopt
 Hyperopt was used to search for suitable Logistic Regression hyperparameters.
 
-[Logistic Regression + Optuna]
-
+### Logistic Regression + Optuna
 Optuna was used to optimize Logistic Regression parameters and compare the resulting performance with the baseline and Hyperopt models.
 
 —-
