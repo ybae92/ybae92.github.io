@@ -1,16 +1,16 @@
-📱 Mobile Price Classification — Research Paper Reproduction
+# 📱 Mobile Price Classification — Research Paper Reproduction
+——-
 
-📌 Project Overview
+## 📌 Project Overview
 
 This project reproduces the machine learning experiments presented in the research paper “Mobile Price Classification” using the publicly available Mobile Price Classification dataset.
-
 The study focuses on predicting mobile phone price ranges based on hardware and technical specifications. The original experimental approach was reproduced and extended by comparing different machine learning models and hyperparameter optimization methods.
 
 Research Paper: https://www.mdpi.com/2079-9292/14/11/2173
-
 Dataset: Mobile Price Classification Dataset
 
-🎯 Problem Statement
+——
+## 🎯 Problem Statement
 
 * Can mobile phone price ranges be accurately classified based on technical specifications?
 * How well does the baseline SVM model perform?
@@ -19,14 +19,12 @@ Dataset: Mobile Price Classification Dataset
 * How do Hyperopt and Optuna affect model performance?
 * How closely can the reproduced results match the original research paper?
 
-📊 Dataset
+## 📊 Dataset
 
+—-
 Source: Kaggle — Mobile Price Classification Dataset
-
 Size: 2,000 observations, 21 columns
-
 Target Variable: price_range
-
 The target variable represents four mobile phone price categories:
 
 * 0 — Low price
@@ -34,7 +32,7 @@ The target variable represents four mobile phone price categories:
 * 2 — Medium-high price
 * 3 — High price
 
-Main Features:
+### Main Features:
 
 * Battery power
 * Bluetooth
@@ -56,25 +54,20 @@ Main Features:
 * Touch screen
 * Wi-Fi
 
-🔄 Research Reproduction Workflow
+—-
+### 🔄 Research Reproduction Workflow
 
-1. Data Preparation
-
+#### 1. Data Preparation
 * Loaded the Mobile Price Classification dataset
 * Inspected dataset structure and feature types
 * Checked for missing values and potential data quality issues
 
-2. Data Preprocessing
-
-* Checked missing values
+#### 2. Data Preprocessing
+* Checked missing values and outliers
 * Reviewed feature distributions
-* Converted RAM from KB to MB
-* Applied feature scaling using StandardScaler
 
-3. Data Splitting / Cross-Validation
-
+#### 3. Data Splitting / Cross-Validation
 A 5-fold Stratified Cross-Validation approach was used:
-
 StratifiedKFold(
     n_splits=5,
     shuffle=True,
@@ -83,8 +76,7 @@ StratifiedKFold(
 
 Stratification was used to maintain a similar distribution of the four price categories across folds.
 
-4. Model Training
-
+#### 4. Model Training
 The following models were implemented:
 
 * Baseline SVM
@@ -94,22 +86,19 @@ The following models were implemented:
 * Logistic Regression + Hyperopt
 * Logistic Regression + Optuna
 
-5. Hyperparameter Optimization
+#### 5. Hyperparameter Optimization
 
 Two optimization frameworks were used to investigate whether optimized hyperparameters could improve model performance.
 
-Hyperopt
-
+[Hyperopt]
 Used to search for optimal model parameters based on validation performance.
 
-Optuna
-
+[Optuna]
 Used for automated hyperparameter optimization with a defined search space.
 
-6. Model Evaluation
+#### 6. Model Evaluation
 
 Models were evaluated using:
-
 * Accuracy
 * Precision
 * Recall
@@ -117,29 +106,30 @@ Models were evaluated using:
 
 Macro-averaged metrics were used to evaluate performance across the four price categories.
 
-7. Performance Comparison
+#### 7. Performance Comparison
 
 The performance of all six approaches was compared:
 
-Model	Optimization
-SVM	Baseline
-SVM	Hyperopt
-SVM	Optuna
-Logistic Regression	Baseline
-Logistic Regression	Hyperopt
-Logistic Regression	Optuna
-
+[Model Optimization] 
+*SVM	Baseline
+*SVM	Hyperopt
+*SVM	Optuna
+*Logistic Regression	Baseline
+*Logistic Regression	Hyperopt
+*Logistic Regression	Optuna
 The comparison focuses on whether hyperparameter optimization provides measurable improvements over baseline models.
 
-📈 Experimental Approach
+—-
+## 📈 Experimental Approach
 
 The reproduction follows the general methodology described in the research paper:
-
+—-
 Dataset → Preprocessing → Cross-Validation → Model Training → Hyperparameter Optimization → Evaluation → Performance Comparison
-
+—-
 The reproduced experiments were then compared with the methodology and reported results from the original paper.
 
-🔍 Key Insights
+—-
+## 🔍 Key Insights
 
 * Mobile phone price ranges can be effectively classified using hardware and technical specifications.
 * SVM provides a strong baseline for the multi-class classification problem.
@@ -149,46 +139,44 @@ The reproduced experiments were then compared with the methodology and reported 
 * Cross-validation provides a more robust estimate of model performance than relying on a single train/test split.
 * The final comparison helps identify which model and optimization strategy provides the best classification performance.
 
-📊 Models Compared
+—-
+## 📊 Models Compared
 
-SVM
-
+[SVM]
 Support Vector Machine was selected as the primary classification model and reproduced as a baseline before optimization.
 
-SVM + Hyperopt
-
+[SVM + Hyperopt]
 Hyperopt was used to optimize SVM hyperparameters such as:
-
 * C
 * gamma
 * kernel
 * decision_function_shape
 
-SVM + Optuna
-
+[SVM + Optuna]
 Optuna was used to perform automated hyperparameter optimization over a predefined search space.
 
-Logistic Regression
+[Logistic Regression]
 Logistic Regression was added as an additional classification model to provide a comparison with SVM.
 
-Logistic Regression + Hyperopt
+[Logistic Regression + Hyperopt]
 Hyperopt was used to search for suitable Logistic Regression hyperparameters.
 
-Logistic Regression + Optuna
+[Logistic Regression + Optuna]
 Optuna was used to optimize Logistic Regression parameters and compare the resulting performance with the baseline and Hyperopt models.
 
-📉 Evaluation Metrics
+—-
+## 📉 Evaluation Metrics
 
 The following metrics were used:
-
 * Accuracy — Overall classification performance
 * Precision — Proportion of positive predictions that were correct
 * Recall — Proportion of actual positives correctly identified
 * F1-score — Harmonic mean of precision and recall
 
 Because this is a four-class classification problem, macro averaging was used to give equal importance to each price category.
+—-
 
-🛠 Tech Stack
+## 🛠 Tech Stack
 
 * Python
 * Pandas
@@ -200,7 +188,8 @@ Because this is a four-class classification problem, macro averaging was used to
 * Seaborn
 * Jupyter Notebook
 
-👤 My Role
+—-
+## 👤 My Role
 
 * Reproduced the methodology from the research paper
 * Performed data cleaning and preprocessing
@@ -217,12 +206,12 @@ Because this is a four-class classification problem, macro averaging was used to
 * Created visualizations for model and data analysis
 * Analyzed differences between the reproduced experiments and the original research paper
 
-📚 Reference
+—-
+## 📚 Reference
 
-Research Paper:
+[Research Paper]
 Mobile Price Classification, Electronics, MDPI
-
 https://www.mdpi.com/2079-9292/14/11/2173
 
-Dataset:
+[Dataset]
 Mobile Price Classification — Kaggle
