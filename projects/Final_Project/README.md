@@ -212,9 +212,9 @@ Because this is a four-class classification problem, macro averaging was used to
 
 ## 📚 Reference
 
-[Research Paper]
-Mobile Price Classification, Electronics, MDPI
-https://www.mdpi.com/2079-9292/14/11/2173
+* [Research Paper]
+** Mobile Price Classification, Electronics, MDPI
+** https://www.mdpi.com/2079-9292/14/11/2173
 
-[Dataset]
-Mobile Price Classification — Kaggle
+* [Dataset]
+** Mobile Price Classification — Kaggle
