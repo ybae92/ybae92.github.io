@@ -63,15 +63,12 @@ The following models were implemented:
 * Logistic Regression + Optuna
 
 ### 5. Hyperparameter Optimization
-
 Two optimization frameworks were used to investigate whether optimized hyperparameters could improve model performance.
 
-[Hyperopt]
-
+#### Hyperopt
 Used to search for optimal model parameters based on validation performance.
 
-[Optuna]
-
+#### Optuna
 Used for automated hyperparameter optimization with a defined search space.
 
 ### 6. Model Evaluation
@@ -99,7 +96,6 @@ The performance of all six approaches was compared:
 The comparison focuses on whether hyperparameter optimization provides measurable improvements over baseline models.
 
 ## 📈 Experimental Approach
-
 * The reproduction follows the general methodology described in the research paper:
     * Dataset → Preprocessing → Cross-Validation → Model Training → Hyperparameter Optimization → Evaluation → Performance Comparison
 
@@ -139,7 +135,6 @@ Hyperopt was used to search for suitable Logistic Regression hyperparameters.
 ### Logistic Regression + Optuna
 Optuna was used to optimize Logistic Regression parameters and compare the resulting performance with the baseline and Hyperopt models.
 
-—-
 ## 📉 Evaluation Metrics
 
 The following metrics were used:
