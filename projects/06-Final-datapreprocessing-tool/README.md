@@ -114,6 +114,7 @@ The tool also displays the encoding result so users can check how the categorica
 ```text
 06-Final-datapreprocessing-tool/
 │
+├── dataset
 ├── app.py
 ├── preprocessing.py
 ├── profiling.py
