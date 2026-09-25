@@ -42,3 +42,4 @@ Below are selected projects demonstrating data analysis, machine learning, and v
 - Tools: Python, Pandas, Numpy, Ydata_Profiling, SciPy, Matplotlib, Seaborn
 
 👉 [View Project](./04-world-happiness-analysis)
+ㅜ
