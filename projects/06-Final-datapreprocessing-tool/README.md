@@ -117,8 +117,6 @@ The tool also displays the encoding result so users can check how the categorica
 ├── app.py
 ├── preprocessing.py
 ├── profiling.py
-├── get_values.py
-├── profile_images/
 ├── README.md
 └── ...
 ```
